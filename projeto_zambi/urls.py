@@ -17,37 +17,10 @@ Incluindo outro URLconf
 
 
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
-
-
-# Http Request
-def home(request):
-    """Function printing python version."""
-    request = 'Home'
-    return HttpResponse(request)
-    # return http Response
-
-
-# Http Request
-def sobre(request):
-    """Function printing python version."""
-    request = 'Sobre'
-    return HttpResponse(request)
-    # return http Response
-
-
-# Http Request
-def contato(request):
-    """Function printing python version."""
-    request = 'Contato'
-    return HttpResponse(request)
-    # return http Response
+from django.urls import path, include
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),  # Home
-    path('sobre/', sobre),  # /sobre
-    path('contato/', contato),  # /contato
+    path('', include('zambi.urls'))
 ]
