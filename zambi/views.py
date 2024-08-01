@@ -5,29 +5,34 @@ Este módulo define as funções de visualização para o aplicativo Django
 """
 
 
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
-# Http Request
 def home(request):
-    """Function printing python version."""
-    request = 'Home'
-    return HttpResponse(request)
-    # return http Response
+    """
+    Exibe a página inicial do site.
+
+    Esta função processa uma solicitação HTTP e retorna a resposta com
+    o conteúdo do template 'home.html'.
+    """
+    return render(request, 'zambi/home.html')
 
 
-# Http Request
 def contato(request):
-    """Function printing python version."""
-    request = 'Contato'
-    return HttpResponse(request)
-    # return http Response
+    """
+    Exibe a página de Contatos do site.
+
+    Esta função processa uma solicitação HTTP e retorna a resposta com
+    o conteúdo do template 'contato.html'.
+    """
+    return render(request, 'zambi/contato.html')
 
 
-# Http Request
 def sobre(request):
-    """Function printing python version."""
-    request = 'Sobre'
-    return HttpResponse(request)
-    # return http Response
+    """
+    Exibe a página de sobre do site.
+
+    Esta função processa uma solicitação HTTP e retorna a resposta com
+    o conteúdo do template 'sobre.html'.
+    """
+    return render(request, 'zambi/sobre.html')
