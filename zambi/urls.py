@@ -6,10 +6,8 @@ mapeando URLs para suas respectivas visualizações.
 """
 
 from django.urls import path
-from zambi.views import contato, home, sobre
+from zambi.views import home
 
 urlpatterns = [
     path('', home),  # Página inicial
-    path('sobre/', sobre),  # Página sobre
-    path('contato/', contato),  # Página de contato
 ]

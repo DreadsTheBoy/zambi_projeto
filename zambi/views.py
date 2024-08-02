@@ -15,24 +15,5 @@ def home(request):
     Esta função processa uma solicitação HTTP e retorna a resposta com
     o conteúdo do template 'home.html'.
     """
-    return render(request, 'zambi/home.html')
+    return render(request, 'zambi/pages/home.html')
 
-
-def contato(request):
-    """
-    Exibe a página de Contatos do site.
-
-    Esta função processa uma solicitação HTTP e retorna a resposta com
-    o conteúdo do template 'contato.html'.
-    """
-    return render(request, 'zambi/contato.html')
-
-
-def sobre(request):
-    """
-    Exibe a página de sobre do site.
-
-    Esta função processa uma solicitação HTTP e retorna a resposta com
-    o conteúdo do template 'sobre.html'.
-    """
-    return render(request, 'zambi/sobre.html')
